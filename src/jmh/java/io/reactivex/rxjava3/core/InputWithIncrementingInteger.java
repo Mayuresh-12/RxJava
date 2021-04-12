@@ -109,6 +109,8 @@ public abstract class InputWithIncrementingInteger {
         flowable = Flowable.range(0, size);
 
         firehose = Flowable.unsafeCreate(new IncrementingPublisher(size));
+        //TODO: Remove dead code.
+        //FIXME: Delete the iterable variable.
         iterable = new IncrementingIterable(size);
 
     }
