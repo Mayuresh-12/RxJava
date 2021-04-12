@@ -51,9 +51,6 @@ public class FlowableMapTest extends RxJavaTest {
     @Before
     public void before() {
         stringSubscriber = TestHelper.mockSubscriber();
-        //TODO: Remove field as it is not read
-        //FIXME: Delete the line of code as it is not read.
-        stringSubscriber2 = TestHelper.mockSubscriber();
     }
 
     @Test
