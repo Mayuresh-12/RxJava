@@ -106,6 +106,8 @@ public class CompletableDetachTest extends RxJavaTest {
 
         d = null;
 
+        //TODO: Remove explicit garbage collection.
+        //FIXME: Remove System.gc().
         System.gc();
         Thread.sleep(200);
 
