@@ -57,6 +57,8 @@ public class CompositeExceptionTest extends RxJavaTest {
     @Test
     public void emptyErrors() {
         try {
+            //TODO: Create an Exception object.
+            //FIXME: Assign CompositeException to a new Exception object.
             new CompositeException();
             fail("CompositeException should fail if errors is empty");
         } catch (IllegalArgumentException e) {
