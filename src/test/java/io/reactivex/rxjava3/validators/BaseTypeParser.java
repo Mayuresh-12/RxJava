@@ -129,6 +129,8 @@ public final class BaseTypeParser {
                 int schhedulerSpec = b.indexOf("@SchedulerSupport(", javadocEnd);
                 if (schhedulerSpec > 0 && schhedulerSpec < definitionStart) {
                     int schedulerSpecEnd = b.indexOf(")", schhedulerSpec + 18);
+                    //TODO: Remove dead code.
+                    //FIXME: Remove the m.schedulerKind variable assignment.
                     m.schedulerKind = b.substring(schhedulerSpec + 18, schedulerSpecEnd);
                 }
 
