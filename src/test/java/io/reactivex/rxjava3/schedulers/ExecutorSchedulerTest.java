@@ -127,6 +127,8 @@ public class ExecutorSchedulerTest extends AbstractSchedulerConcurrencyTests {
             finish = memoryMXBean.getHeapMemoryUsage().getUsed();
         }
 
+        //TODO: Change the double value to float.
+        //FIXME: Change 1024d to 1024.0
         fail(String.format("Tasks retained: %.3f -> %.3f -> %.3f", initial / 1024 / 1024.0, after / 1024 / 1024.0, finish / 1024 / 1024d));
     }
 
