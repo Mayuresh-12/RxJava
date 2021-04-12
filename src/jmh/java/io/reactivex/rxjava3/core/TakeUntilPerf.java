@@ -40,9 +40,7 @@ public class TakeUntilPerf implements Consumer<Integer> {
 
     @Override
     public void accept(Integer t) {
-        //TODO: Change the atomic nature of the increment.
-        //FIXME: Change the line of code to items = items + 1.
-        items++;
+        items = items + 1;
     }
 
     @Setup
