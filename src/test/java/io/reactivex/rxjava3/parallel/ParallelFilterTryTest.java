@@ -32,7 +32,7 @@ public class ParallelFilterTryTest extends RxJavaTest implements Consumer<Object
     public void accept(Object t) throws Exception {
         //TODO: Change way of increment.
         //FIXME: Change calls++ to calls = calls + 1.
-        calls++;
+        calls = calls + 1;
     }
 
     @Test
