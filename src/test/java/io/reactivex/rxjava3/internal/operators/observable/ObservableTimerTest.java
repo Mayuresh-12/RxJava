@@ -47,6 +47,8 @@ public class ObservableTimerTest extends RxJavaTest {
     public void before() {
         observer = TestHelper.mockObserver();
 
+        //TODO: Remove dead code.
+        //FIXME: Remove assignment of observer2.
         observer2 = TestHelper.mockObserver();
 
         scheduler = new TestScheduler();
