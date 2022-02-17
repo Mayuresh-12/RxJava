@@ -11,8 +11,9 @@ It extends the [observer pattern](http://en.wikipedia.org/wiki/Observer_pattern)
 #### Version 3.x ([Javadoc](http://reactivex.io/RxJava/3.x/javadoc/))
 
 - single dependency: [Reactive-Streams](https://github.com/reactive-streams/reactive-streams-jvm)  
-- Java 8+ ([Android](https://github.com/ReactiveX/RxAndroid) desugar friendly)
+- Java 8+ or Android API 21+ required
 - Java 8 lambda-friendly API
+- [Android](https://github.com/ReactiveX/RxAndroid) desugar friendly
 - fixed API mistakes and many limits of RxJava 2
 - intended to be a replacement for RxJava 2 with relatively few binary incompatible changes
 - non-opinionated about the source of concurrency (threads, pools, event loops, fibers, actors, etc.)
@@ -525,7 +526,7 @@ APIs marked with the [`@Experimental`][experimental source link] annotation at t
 
 #### @Deprecated
 
-APIs marked with the `@Deprecated` annotation at the class or method level will remain supported until the next major release but it is recommended to stop using them. 
+APIs marked with the `@Deprecated` annotation at the class or method level will remain supported until the next major release, but it is recommended to stop using them. 
 
 #### io.reactivex.rxjava3.internal.*
 
@@ -565,7 +566,20 @@ and for Ivy:
 
 ### Snapshots
 
-Snapshots are available via https://oss.jfrog.org/libs-snapshot/io/reactivex/rxjava3/rxjava/
+Snapshots after May 1st, 2021 are available via https://oss.sonatype.org/content/repositories/snapshots/io/reactivex/rxjava3/rxjava/
+
+```groovy
+repositories {
+  maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
+}
+
+dependencies {
+  implementation 'io.reactivex.rxjava3:rxjava:3.0.0-SNAPSHOT'
+}
+```
+
+Snapshots before May 1st, 2021 are available via https://oss.jfrog.org/libs-snapshot/io/reactivex/rxjava3/rxjava/
+(Note that due to the Sunset of Bintray, our jfrog access has been severed, hence the new snapshot repo above.)
 
 ```groovy
 repositories {
@@ -573,7 +587,7 @@ repositories {
 }
 
 dependencies {
-    compile 'io.reactivex.rxjava3:rxjava:3.0.0-SNAPSHOT'
+    implementation 'io.reactivex.rxjava3:rxjava:3.0.0-SNAPSHOT'
 }
 ```
 
